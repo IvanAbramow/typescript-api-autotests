@@ -265,7 +265,7 @@
   "overrides": [
     { "includes": ["types/**/*.ts"], "linter": { "rules": {} } },
     {
-      "includes": ["packages/utils/logger.ts"],
+      "includes": ["packages/utils/loggers/logger.ts"],
       "linter": { "rules": { "suspicious": { "noConsole": "off" } } }
     },
     {

@@ -1,3 +1,4 @@
+export { Step } from './decorators/Step';
 export { removeDir } from './directory';
-export { log } from './logger';
+export * from './loggers';
 export { sleep } from './sleep';
