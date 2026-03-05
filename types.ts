@@ -67,3 +67,8 @@ export type MockParam = {
   url: string | RegExp | ((url: URL) => boolean);
   response: Parameters<Route['fulfill']>[0];
 };
+
+export const enum ETestTypes {
+  POSITIVE = '(positive)',
+  NEGATIVE = '(negative)',
+}

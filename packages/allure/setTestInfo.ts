@@ -1,6 +1,6 @@
-/** Функция заполняет test.info() необходимыми значениями
+/** Функция заполняет http.info() необходимыми значениями
  * @example
- * test.describe(TITLES.API,
+ * http.describe(TITLES.API,
  *   setTestInfo({
  *    suite: SUITES.API,
  *    subSuite: "user",

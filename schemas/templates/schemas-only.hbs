@@ -1,0 +1,13 @@
+import { z } from "zod";
+
+{{#each schemas}}
+    const {{@key}} = {{{this}}};
+    export type {{@key}}Params = z.infer<typeof {{@key}}>;
+
+{{/each}}
+
+export const ZOD_SCHEMAS = {
+{{#each schemas}}
+    {{@key}},
+{{/each}}
+};

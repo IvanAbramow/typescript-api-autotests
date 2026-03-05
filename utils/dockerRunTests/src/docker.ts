@@ -27,7 +27,7 @@ const PLAYWRIGHT_IMAGE_TAG: string = 'playwright_tests_web_image';
 const packageJsonContent = JSON.parse(readFileSync(join(process.cwd(), 'package.json'), 'utf-8'));
 
 const { name: projectName, devDependencies } = packageJsonContent;
-const playwrightVersion = devDependencies['@playwright/test'];
+const playwrightVersion = devDependencies['@playwright/http'];
 
 /**
  * Удаляет Docker-образ по имени

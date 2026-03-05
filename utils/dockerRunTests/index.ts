@@ -40,7 +40,7 @@ const start = async () => {
 
 start()
   .catch((error) => {
-    log.error('Unhandled error in test pipeline:', error);
+    log.error('Unhandled error in http pipeline:', error);
   })
   .finally(() => {
     process.exit();

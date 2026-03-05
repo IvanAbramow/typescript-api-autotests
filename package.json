@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "allure:clear": "rm -rf allure-report allure-results",
-    "allure:report": "allure generate allure-results && allure open",
+    "allure:report": "bunx allure generate allure-results && bunx allure open",
     "biome:fix": "bunx @biomejs/biome check --write --unsafe .",
     "biome:no-fix": "bunx @biomejs/biome check .",
     "build:check": "tsc --noEmit --skipLibCheck",
@@ -27,7 +27,8 @@
     "test": "bunx playwright test",
     "test:local": "bun run test --workers=1",
     "utils:docker-build": "docker build -f Dockerfile-base -t playwright-bun:latest .",
-    "utils:docker-run-tests": "bun run ./utils/dockerRunTests/index.ts"
+    "utils:docker-run-tests": "bun run ./utils/dockerRunTests/index.ts",
+    "zod:generate": "openapi-zod-client http://localhost:8000/openapi.json -o ./schemas/generated.ts -t schemas/templates/schemas-only.hbs --export-schemas --with-description"
   },
   "lint-staged": {
     "package.json": "sort-package-json",
@@ -45,7 +46,7 @@
     "enquirer": "2.4.1",
     "husky": "9.1.7",
     "lint-staged": "16.3.2",
-    "orval": "8.5.2",
+    "openapi-zod-client": "1.18.3",
     "sort-package-json": "3.6.1",
     "typescript": "5.9.3",
     "uuid": "13.0.0",

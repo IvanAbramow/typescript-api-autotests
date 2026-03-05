@@ -20,7 +20,7 @@ const fillAllureNotations = async (testInfo: TestInfo) => {
   const { type, description } = annotations[0] || {};
 
   await Promise.all([
-    // вторым элементом в массиве идет заголовок из test.describe
+    // вторым элементом в массиве идет заголовок из http.describe
     setParentSuite(titlePath[1]),
     description ? setSuite(description) : Promise.resolve(),
     type ? setSubSuite(type) : Promise.resolve(),
@@ -65,11 +65,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(value).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(value);
+        const expectation = this.isNot ? baseExpect(value).not : baseExpect(value);
         expectation.toBeDefined();
         pass = true;
       } catch (error: any) {
@@ -113,11 +109,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(value).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(value);
+        const expectation = this.isNot ? baseExpect(value).not : baseExpect(value);
         expectation.toBeUndefined();
         pass = true;
       } catch (error: any) {
@@ -166,11 +158,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual);
+        const expectation = this.isNot ? baseExpect(actual).not : baseExpect(actual);
         expectation.toBe(expected);
         pass = true;
       } catch (error: any) {
@@ -203,11 +191,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual);
+        const expectation = this.isNot ? baseExpect(actual).not : baseExpect(actual);
         expectation.toContain(expected);
         pass = true;
       } catch (error: any) {
@@ -240,11 +224,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual);
+        const expectation = this.isNot ? baseExpect(actual).not : baseExpect(actual);
         expectation.toEqual(expected);
         pass = true;
       } catch (error: any) {
@@ -280,11 +260,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(actual);
+        const expectation = this.isNot ? baseExpect(actual).not : baseExpect(actual);
         expectation.toHaveLength(expected);
         pass = true;
       } catch (error: any) {
@@ -330,11 +306,7 @@ export const expect = baseExpect.extend({
       let matcherResult: any;
 
       try {
-        const expectation = this.isNot
-          ? // eslint-disable-next-line playwright/valid-expect
-            baseExpect(value).not
-          : // eslint-disable-next-line playwright/valid-expect
-            baseExpect(value);
+        const expectation = this.isNot ? baseExpect(value).not : baseExpect(value);
         expectation.toMatch(expected);
         pass = true;
       } catch (error: any) {

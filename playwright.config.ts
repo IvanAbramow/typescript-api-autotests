@@ -37,6 +37,9 @@ const CONFIG: PlaywrightTestConfig = {
   projects: [
     {
       name: 'api',
+      use: {
+        baseURL: 'http://localhost:8000/api/',
+      },
     },
   ],
   quiet: !!isCI,

@@ -50,7 +50,7 @@ if (startsWithTaskNumber || containsTaskNumber) {
   process.exit(0);
 }
 
-const conventionalPrefixRegex = /^\s*(feat|fix|docs|style|refactor|test|chore|perf|build|ci|revert)(\([^)]+\))?!?:\s*/i;
+const conventionalPrefixRegex = /^\s*(feat|fix|docs|style|refactor|http|chore|perf|build|ci|revert)(\([^)]+\))?!?:\s*/i;
 const match = commitMessage.match(conventionalPrefixRegex);
 
 let newCommitMessage: string;

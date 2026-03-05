@@ -8,6 +8,10 @@ export const SUITES = {
   },
 };
 
+export const SUB_SUITES = {
+  USERS: 'users',
+};
+
 export const TAGS = {
-  api: '@api',
+  users: '@users',
 };
