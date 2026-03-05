@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "target": "ESNext",
+    "module": "nodenext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "checkJs": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types", "global.d.ts"],
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@packages/*": ["packages/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts"]
+}

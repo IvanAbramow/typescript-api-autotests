@@ -1,0 +1,5 @@
+FROM mcr.microsoft.com/playwright:v1.58.2-noble
+
+ENV NODE_TLS_REJECT_UNAUTHOEIZED=0
+
+RUN npm install -g bun@latest

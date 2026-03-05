@@ -1,0 +1,22 @@
+ARG BASE_VERSION=latest
+
+FROM playwright-bun:${BASE_VERSION} AS builder
+
+ARG PROJECT_NAME
+
+RUN mkdir -p /$PROJECT_NAME
+WORKDIR /$PROJECT_NAME
+
+COPY package.json bun.lock ./$PROJECT_NAME
+COPY . .
+
+RUN bun install
+
+FROM playwright-bun:${BASE_VERSION}
+
+ARG PROJECT_NAME
+WORKDIR /$PROJECT_NAME
+
+COPY --from=builder /$PROJECT_NAME ./
+
+CMD ["/bin/bash"]

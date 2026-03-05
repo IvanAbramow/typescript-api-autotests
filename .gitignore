@@ -1,0 +1,19 @@
+### IDEA ###
+.idea
+.vscode
+.DS_Store
+
+### Node ###
+.npmrc
+.npmrc_temp
+node_modules
+package-lock.json
+
+### Playwright ###
+test-results
+html-results
+
+### Allure ###
+.allure
+allure-results
+allure-report
